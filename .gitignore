@@ -1,0 +1,41 @@
+# ESPHome build output and local state
+.esphome/
+.pioenvs/
+.piolibdeps/
+.pio/
+platformio.ini
+*.bin
+*.elf
+*.map
+
+# Secrets — never commit real credentials
+secrets.yaml
+!secrets.yaml.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Editors / IDEs
+.claude/settings.local.json
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

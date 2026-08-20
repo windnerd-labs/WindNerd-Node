@@ -51,9 +51,7 @@ wifi:
 captive_portal:
 
 external_components:
-  - source:
-      type: local
-      path: github://windnerd-labs/WindNerd-Node@main
+  - source: github://windnerd-labs/WindNerd-Node@main
     components: [ tmag5273 ]
 
 # ESP32-C3 has a single I2C controller

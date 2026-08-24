@@ -1,0 +1,6 @@
+Copyright (C) 2026 WindNerd.net
+
+Software is licensed under the BSD 3-Clause License.
+Documentation is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+
+Full license texts are provided in the corresponding subfolders of this repository.

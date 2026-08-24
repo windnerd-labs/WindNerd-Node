@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="633"
+   height="446"
+   viewBox="0 0 880 620"
+   role="img"
+   aria-label="Schematic of the circuitry between J1 and the ESP32-C3. Pin 1 goes to ground. Pin 2 taps the 3.3 volt rail. Pins 3, 4 and 5 each have a 5.1 kilohm pull-up to 3.3 volts and a 100 ohm series resistor before reaching GPIO2, GPIO1 and GPIO0. The TMAG5273 wind vane sensor shares the I2C bus. The SIG line also feeds a 69 hertz RC low-pass filter into GPIO4."
+   version="1.1"
+   id="svg206"
+   sodipodi:docname="fig3-j1-interface-circuit.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs210" />
+  <sodipodi:namedview
+     id="namedview208"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.1532542"
+     inkscape:cx="551.49086"
+     inkscape:cy="414.25671"
+     inkscape:window-width="3840"
+     inkscape:window-height="2019"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg206" />
+  <!--
+    FIG. 3 — J1 interface circuit, WindNerd Node (node-3)
+    Colors: ink #232B2C · muted #5E6C6D · GND #3A4145 · 3V3 #BC4238
+            SCL #8B979D · SDA #B08C0A · SIG #C2611E · accent #A5622F · box fill #FFFFFF
+    Rows: pin1 GND y=100 · pin2 3V3 y=150 · pin3 SCL y=220 · pin4 SDA y=290 · pin5 SIG y=380
+    Line crossings without a junction dot are not connected.
+  -->
+  <rect
+     x="0"
+     y="0"
+     width="880"
+     height="620"
+     fill="#FFFFFF"
+     id="rect2" />
+  <!-- ===== GND (pin 1) ===== -->
+  <line
+     x1="130"
+     y1="100"
+     x2="250"
+     y2="100"
+     stroke="#3A4145"
+     stroke-width="2"
+     id="line4" />
+  <line
+     x1="250"
+     y1="100"
+     x2="250"
+     y2="112"
+     stroke="#3A4145"
+     stroke-width="2"
+     id="line6" />
+  <g
+     stroke="#3A4145"
+     stroke-width="2"
+     id="g14">
+    <line
+       x1="238"
+       y1="112"
+       x2="262"
+       y2="112"
+       id="line8" />
+    <line
+       x1="242"
+       y1="118"
+       x2="258"
+       y2="118"
+       id="line10" />
+    <line
+       x1="246"
+       y1="124"
+       x2="254"
+       y2="124"
+       id="line12" />
+  </g>
+  <text
+     x="180"
+     y="92"
+     font-size="11"
+     font-family="IBM Plex Mono, monospace"
+     fill="#5E6C6D"
+     id="text16">GND</text>
+  <!-- ===== 3V3 rail (pin 2) ===== -->
+  <line
+     x1="130"
+     y1="150"
+     x2="360"
+     y2="150"
+     stroke="#BC4238"
+     stroke-width="2"
+     id="line18" />
+  <circle
+     cx="200"
+     cy="150"
+     r="3.4"
+     fill="#BC4238"
+     id="circle20" />
+  <circle
+     cx="240"
+     cy="150"
+     r="3.4"
+     fill="#BC4238"
+     id="circle22" />
+  <circle
+     cx="280"
+     cy="150"
+     r="3.4"
+     fill="#BC4238"
+     id="circle24" />
+  <text
+     x="370"
+     y="147"
+     font-size="12"
+     font-family="IBM Plex Mono, monospace"
+     font-weight="600"
+     fill="#BC4238"
+     id="text26">+3V3</text>
+  <!-- ===== pull-up risers ===== -->
+  <line
+     x1="200"
+     y1="150"
+     x2="200"
+     y2="220"
+     stroke="#8B979D"
+     stroke-width="1.6"
+     id="line30" />
+  <rect
+     x="193"
+     y="167"
+     width="14"
+     height="36"
+     fill="#FFFFFF"
+     stroke="#232B2C"
+     stroke-width="1.2"
+     id="rect32" />
+  <text
+     x="188"
+     y="189"
+     font-size="10"
+     font-family="IBM Plex Mono, monospace"
+     fill="#5E6C6D"
+     text-anchor="end"
+     id="text34">5.1k</text>
+  <line
+     x1="240"
+     y1="150"
+     x2="240"
+     y2="290"
+     stroke="#B08C0A"
+     stroke-width="1.6"
+     id="line36" />
+  <rect
+     x="233"
+     y="240"
+     width="14"
+     height="36"
+     fill="#FFFFFF"
+     stroke="#232B2C"
+     stroke-width="1.2"
+     id="rect38" />
+  <text
+     x="228"
+     y="262"
+     font-size="10"
+     font-family="IBM Plex Mono, monospace"
+     fill="#5E6C6D"
+     text-anchor="end"
+     id="text40">5.1k</text>
+  <line
+     x1="280"
+     y1="150"
+     x2="280"
+     y2="380"
+     stroke="#C2611E"
+     stroke-width="1.6"
+     id="line42" />
+  <rect
+     x="273"
+     y="310"
+     width="14"
+     height="36"
+     fill="#FFFFFF"
+     stroke="#232B2C"
+     stroke-width="1.2"
+     id="rect44" />
+  <text
+     x="268"
+     y="332"
+     font-size="10"
+     font-family="IBM Plex Mono, monospace"
+     fill="#5E6C6D"
+     text-anchor="end"
+     id="text46">5.1k</text>
+  <!-- ===== SCL row ===== -->
+  <line
+     x1="130"
+     y1="220"
+     x2="330"
+     y2="220"
+     stroke="#8B979D"
+     stroke-width="2"
+     id="line48" />
+  <rect
+     x="330"
+     y="212"
+     width="60"
+     height="16"
+     fill="#FFFFFF"
+     stroke="#232B2C"
+     stroke-width="1.2"
+     id="rect50" />
+  <text
+     x="360"
+     y="206"
+     font-size="10"
+     font-family="IBM Plex Mono, monospace"
+     fill="#5E6C6D"
+     text-anchor="middle"
+     id="text52">100Ω</text>
+  <line
+     x1="390"
+     y1="220"
+     x2="680"
+     y2="220"
+     stroke="#8B979D"
+     stroke-width="2"
+     id="line54" />
+  <circle
+     cx="200"
+     cy="220"
+     r="3.4"
+     fill="#8B979D"
+     id="circle56" />
+  <circle
+     cx="424.79999"
+     cy="220"
+     r="3.4000001"
+     fill="#8b979d"
+     id="circle58" />
+  <!-- ===== SDA row ===== -->
+  <line
+     x1="130"
+     y1="290"
+     x2="330"
+     y2="290"
+     stroke="#B08C0A"
+     stroke-width="2"
+     id="line64" />
+  <rect
+     x="330"
+     y="282"
+     width="60"
+     height="16"
+     fill="#FFFFFF"
+     stroke="#232B2C"
+     stroke-width="1.2"
+     id="rect66" />
+  <text
+     x="360"
+     y="276"
+     font-size="10"
+     font-family="IBM Plex Mono, monospace"
+     fill="#5E6C6D"
+     text-anchor="middle"
+     id="text68">100Ω</text>
+  <line
+     x1="390"
+     y1="290"
+     x2="680"
+     y2="290"
+     stroke="#B08C0A"
+     stroke-width="2"
+     id="line70" />
+  <circle
+     cx="240"
+     cy="290"
+     r="3.4"
+     fill="#B08C0A"
+     id="circle72" />
+  <circle
+     cx="464.79999"
+     cy="290"
+     r="3.4000001"
+     fill="#b08c0a"
+     id="circle74" />
+  <!-- ===== SIG row ===== -->
+  <line
+     x1="130"
+     y1="380"
+     x2="330"
+     y2="380"
+     stroke="#C2611E"
+     stroke-width="2"
+     id="line80" />
+  <rect
+     x="330"
+     y="372"
+     width="60"
+     height="16"
+     fill="#FFFFFF"
+     stroke="#232B2C"
+     stroke-width="1.2"
+     id="rect82" />
+  <text
+     x="360"
+     y="366"
+     font-size="10"
+     font-family="IBM Plex Mono, monospace"
+     fill="#5E6C6D"
+     text-anchor="middle"
+     id="text84">100Ω</text>
+  <line
+     x1="390"
+     y1="380"
+     x2="680"
+     y2="380"
+     stroke="#C2611E"
+     stroke-width="2"
+     id="line86" />
+  <circle
+     cx="280"
+     cy="380"
+     r="3.4"
+     fill="#C2611E"
+     id="circle88" />
+  <circle
+     cx="531.84247"
+     cy="379.90442"
+     r="3.4000001"
+     fill="#c2611e"
+     id="circle90" />
+  <!-- ===== RC branch to GPIO4 ===== -->
+  <line
+     x1="531.84247"
+     y1="379.90442"
+     x2="531.84247"
+     y2="449.90442"
+     stroke="#c2611e"
+     stroke-width="1.6"
+     id="line94" />
+  <line
+     x1="531.84247"
+     y1="449.90442"
+     x2="561.84247"
+     y2="449.90442"
+     stroke="#c2611e"
+     stroke-width="1.6"
+     id="line96" />
+  <rect
+     x="561.84247"
+     y="441.90442"
+     width="60"
+     height="16"
+     fill="#ffffff"
+     stroke="#232b2c"
+     stroke-width="1.2"
+     id="rect98" />
+  <text
+     x="591.5202"
+     y="435.03125"
+     font-size="10px"
+     font-family="'IBM Plex Mono', monospace"
+     fill="#5e6c6d"
+     text-anchor="middle"
+     id="text100">2k</text>
+  <line
+     x1="622.01093"
+     y1="450"
+     x2="680"
+     y2="450"
+     stroke="#c2611e"
+     stroke-width="1.6"
+     id="line102" />
+  <circle
+     cx="652"
+     cy="450"
+     r="3.4"
+     fill="#C2611E"
+     id="circle104" />
+  <!-- two parallel capacitors: 100 nF and 1 µF -->
+  <line
+     x1="652"
+     y1="450"
+     x2="652"
+     y2="489.5296"
+     stroke="#c2611e"
+     stroke-width="1.6"
+     id="line106" />
+  <line
+     x1="632.71973"
+     y1="490.15732"
+     x2="674.71973"
+     y2="490.15732"
+     stroke="#c2611e"
+     stroke-width="1.6"
+     id="line108" />
+  <line
+     x1="632.61401"
+     y1="489.61942"
+     x2="632.61401"
+     y2="501.16693"
+     stroke="#c2611e"
+     stroke-width="1.92229"
+     id="line110" />
+  <line
+     x1="674.61359"
+     y1="489.7319"
+     x2="674.61359"
+     y2="501.03995"
+     stroke="#c2611e"
+     stroke-width="1.90225"
+     id="line112" />
+  <g
+     stroke="#c2611e"
+     stroke-width="2.4"
+     id="g122"
+     transform="translate(13.647585,15.890737)">
+    <line
+       x1="604"
+       y1="486"
+       x2="632"
+       y2="486"
+       id="line114" />
+    <line
+       x1="604"
+       y1="494"
+       x2="632"
+       y2="494"
+       id="line116" />
+    <line
+       x1="646"
+       y1="486"
+       x2="674"
+       y2="486"
+       id="line118" />
+    <line
+       x1="646"
+       y1="494"
+       x2="674"
+       y2="494"
+       id="line120" />
+  </g>
+  <line
+     x1="632.01404"
+     y1="511.69757"
+     x2="632.01404"
+     y2="523.91449"
+     stroke="#c2611e"
+     stroke-width="1.97722"
+     id="line124" />
+  <line
+     x1="674.01404"
+     y1="512.15112"
+     x2="674.01404"
+     y2="523.91449"
+     stroke="#c2611e"
+     stroke-width="1.94018"
+     id="line126" />
+  <line
+     x1="632.01404"
+     y1="523.91449"
+     x2="674.01404"
+     y2="523.91449"
+     stroke="#c2611e"
+     stroke-width="1.6"
+     id="line128" />
+  <line
+     x1="653.01404"
+     y1="523.91449"
+     x2="653.01404"
+     y2="533.91449"
+     stroke="#3a4145"
+     stroke-width="1.6"
+     id="line130" />
+  <g
+     stroke="#3a4145"
+     stroke-width="2"
+     id="g138"
+     transform="translate(14.014036,21.914505)">
+    <line
+       x1="627"
+       y1="512"
+       x2="651"
+       y2="512"
+       id="line132" />
+    <line
+       x1="631"
+       y1="518"
+       x2="647"
+       y2="518"
+       id="line134" />
+    <line
+       x1="635"
+       y1="524"
+       x2="643"
+       y2="524"
+       id="line136" />
+  </g>
+  <text
+     x="610.01404"
+     y="514.91449"
+     font-size="10px"
+     font-family="'IBM Plex Mono', monospace"
+     fill="#5e6c6d"
+     text-anchor="end"
+     id="text140">100n</text>
+  <text
+     x="694.01404"
+     y="514.91449"
+     font-size="10px"
+     font-family="'IBM Plex Mono', monospace"
+     fill="#5e6c6d"
+     id="text142">1µ</text>
+  <text
+     x="626.01404"
+     y="569.91449"
+     font-size="10.5px"
+     font-family="'Source Sans 3', sans-serif"
+     fill="#5e6c6d"
+     id="text144">both caps fitted: ≈ 69 Hz low-pass</text>
+  <text
+     x="626.01404"
+     y="587.91449"
+     font-size="10.5px"
+     font-family="'Source Sans 3', sans-serif"
+     fill="#5e6c6d"
+     id="text146">remove the 1 µF: ≈ 760 Hz</text>
+  <!-- ===== TMAG drops ===== -->
+  <line
+     x1="424.79999"
+     y1="220"
+     x2="424.79999"
+     y2="510"
+     stroke="#8b979d"
+     stroke-width="1.6"
+     id="line148" />
+  <line
+     x1="464.79999"
+     y1="290"
+     x2="464.79999"
+     y2="510"
+     stroke="#b08c0a"
+     stroke-width="1.6"
+     id="line150" />
+  <rect
+     x="374.79999"
+     y="510"
+     width="180"
+     height="72"
+     fill="#ffffff"
+     stroke="#232b2c"
+     stroke-width="1.5"
+     id="rect152" />
+  <text
+     x="425.30017"
+     y="524"
+     font-size="9px"
+     font-family="'IBM Plex Mono', monospace"
+     fill="#8b979d"
+     text-anchor="middle"
+     id="text154">SCL</text>
+  <text
+     x="465.30017"
+     y="524"
+     font-size="9px"
+     font-family="'IBM Plex Mono', monospace"
+     fill="#b08c0a"
+     text-anchor="middle"
+     id="text156">SDA</text>
+  <text
+     x="465.30017"
+     y="548"
+     font-size="12.5px"
+     font-family="Archivo, sans-serif"
+     font-weight="700"
+     fill="#232b2c"
+     text-anchor="middle"
+     id="text158">TMAG5273</text>
+  <text
+     x="465.30017"
+     y="566"
+     font-size="10.5px"
+     font-family="'IBM Plex Mono', monospace"
+     fill="#5e6c6d"
+     text-anchor="middle"
+     id="text160">wind vane · I²C addr 0x22</text>
+  <!-- ===== ESP32 box ===== -->
+  <rect
+     x="680"
+     y="180"
+     width="180"
+     height="300"
+     fill="#FFFFFF"
+     stroke="#232B2C"
+     stroke-width="1.5"
+     id="rect162" />
+  <text
+     x="770"
+     y="208"
+     font-size="14"
+     font-family="Archivo, sans-serif"
+     font-weight="700"
+     fill="#232B2C"
+     text-anchor="middle"
+     id="text164">ESP32-C3</text>
+  <g
+     font-family="IBM Plex Mono, monospace"
+     font-size="10.5"
+     id="g176">
+    <text
+       x="692"
+       y="224"
+       fill="#8B979D"
+       id="text168">GPIO2 · SCL</text>
+    <text
+       x="692"
+       y="294"
+       fill="#B08C0A"
+       id="text170">GPIO1 · SDA</text>
+    <text
+       x="692"
+       y="384"
+       fill="#C2611E"
+       id="text172">GPIO0 · ADC1_CH0</text>
+    <text
+       x="692"
+       y="454"
+       fill="#C2611E"
+       id="text174">GPIO4 · ADC1_CH4</text>
+  </g>
+  <!-- ===== J1 box ===== -->
+  <rect
+     x="40"
+     y="70"
+     width="90"
+     height="350"
+     fill="#FFFFFF"
+     stroke="#A5622F"
+     stroke-width="2"
+     id="rect178" />
+  <text
+     x="52"
+     y="92"
+     font-size="13"
+     font-family="Archivo, sans-serif"
+     font-weight="700"
+     fill="#A5622F"
+     id="text180">J1</text>
+  <g
+     font-family="IBM Plex Mono, monospace"
+     font-size="11"
+     font-weight="600"
+     text-anchor="end"
+     id="g192">
+    <text
+       x="112"
+       y="104"
+       fill="#3A4145"
+       id="text182">1</text>
+    <text
+       x="112"
+       y="154"
+       fill="#BC4238"
+       id="text184">2</text>
+    <text
+       x="112"
+       y="224"
+       fill="#8B979D"
+       id="text186">3</text>
+    <text
+       x="112"
+       y="294"
+       fill="#B08C0A"
+       id="text188">4</text>
+    <text
+       x="112"
+       y="384"
+       fill="#C2611E"
+       id="text190">5</text>
+  </g>
+  <g
+     id="g204">
+    <rect
+       x="124"
+       y="94"
+       width="12"
+       height="12"
+       fill="#3A4145"
+       id="rect194" />
+    <rect
+       x="124"
+       y="144"
+       width="12"
+       height="12"
+       fill="#BC4238"
+       id="rect196" />
+    <rect
+       x="124"
+       y="214"
+       width="12"
+       height="12"
+       fill="#8B979D"
+       id="rect198" />
+    <rect
+       x="124"
+       y="284"
+       width="12"
+       height="12"
+       fill="#B08C0A"
+       id="rect200" />
+    <rect
+       x="124"
+       y="374"
+       width="12"
+       height="12"
+       fill="#C2611E"
+       id="rect202" />
+  </g>
+</svg>

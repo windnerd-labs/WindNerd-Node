@@ -14,7 +14,7 @@ substitutions:
   # pulses/min ÷ 60 → Hz, × 1.31 → m/s  ⇒  1.31 / 60 = 0.0218333
   speed_factor: "0.0218333"
   # Degrees added to the raw magnet angle so that 0° = true north.
-  # Adjust after mounting the vane.
+  # Adjust if necessary after installation.
   direction_offset: "0.0"
 
   # ── Diagnostic LED ──────────────────────────────────────────────────────
@@ -49,23 +49,36 @@ esp32:
     
     
 logger:
+  id: log_component
 
 # Shipped without a key: the first connection is unencrypted
 api:
+  id: api_server
   encryption:
 
 ota:
   - platform: esphome
+    id: ota_esphome
 
 dashboard_import:
   package_import_url: github://windnerd-labs/WindNerd-Node/example/esphome/factory.yaml@main
   import_full_config: true
 
 wifi:
+  id: wifi_component
   ap:
     ssid: ${friendly_name} Hotspot
 
 captive_portal:
+  id: captive_portal_component
+
+# Wi-Fi provisioning over the USB serial port (ESP Web Tools / web installer).
+improv_serial:
+  id: improv_serial_component
+
+esp32_improv:
+  id: esp32_improv_component
+  authorizer: none
 
 external_components:
   - source: github://windnerd-labs/WindNerd-Node@main
@@ -114,7 +127,8 @@ binary_sensor:
           id(led_output).set_level(1.0f);
 
 interval:
-  - interval: 20ms
+  - id: led_interval
+    interval: 20ms
     then:
       - lambda: |-
           // A pulse flash owns the LED until its window expires.

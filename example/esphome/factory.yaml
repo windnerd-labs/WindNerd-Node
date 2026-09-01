@@ -31,7 +31,7 @@ esphome:
   name_add_mac_suffix: true
   project:
     name: "windnerd.node"
-    version: "1.0.0"
+    version: "1.1.0"
 
   # Alive indicator: the LED is lit for the first ${boot_flash_ms} ms, so
   # plugging the board in shows something straight away.
@@ -59,6 +59,22 @@ api:
 ota:
   - platform: esphome
     id: ota_esphome
+  # Installs the binary fetched by the update entity below.
+  - platform: http_request
+    id: ota_http_request
+
+# HTTP client used to fetch the manifest and the firmware binary.
+http_request:
+  id: http_request_component
+
+# Managed updates. The device polls the manifest published for this project and
+# Home Assistant offers an "Install" button whenever the version there differs
+update:
+  - platform: http_request
+    id: firmware_update
+    name: Firmware Update
+    source: https://windnerd-labs.github.io/WindNerd-Node/firmware/manifest.json
+    update_interval: 6h
 
 dashboard_import:
   package_import_url: github://windnerd-labs/WindNerd-Node/example/esphome/factory.yaml@main
@@ -72,10 +88,11 @@ wifi:
 captive_portal:
   id: captive_portal_component
 
-# Wi-Fi provisioning over the USB serial port (ESP Web Tools / web installer).
+# Wi-Fi provisioning over the USB serial port.
 improv_serial:
   id: improv_serial_component
 
+# Wi-Fi provisioning over bluetooth.
 esp32_improv:
   id: esp32_improv_component
   authorizer: none

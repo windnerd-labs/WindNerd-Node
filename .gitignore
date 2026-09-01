@@ -7,6 +7,8 @@ platformio.ini
 *.bin
 *.elf
 *.map
+# ...except the released binaries served by GitHub Pages (see firmware/README.md)
+!firmware/*.bin
 
 # Secrets — never commit real credentials
 secrets.yaml
